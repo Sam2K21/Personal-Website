@@ -3,43 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-    <link rel="stylesheet" href="path/to/your/styles.css">
+    <title>Blog</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>My Blog</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <!-- Add more links as needed -->
-            </ul>
+            <!-- Include your navigation here -->
         </nav>
     </header>
     <main>
-        <section id="blog-posts">
-            <!-- Blog posts will be inserted here by JavaScript -->
-        </section>
+        <h1>Blog Posts</h1>
+        <div class="blog-container">
+            <!-- Add your blog posts here -->
+            <div class="blog-post">
+                <h2>Blog Post Title</h2>
+                <p>Author: Author Name | Date: Post Date</p>
+                <p>Excerpt of the blog post...</p>
+                <a href="blog-post-link">Read More</a>
+            </div>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <!-- Include your footer here -->
     </footer>
-    <script>
-        fetch('/_posts')
-            .then(response => response.json())
-            .then(posts => {
-                const postsSection = document.getElementById('blog-posts');
-                posts.forEach(post => {
-                    const postElement = document.createElement('article');
-                    postElement.innerHTML = `
-                        <h2>${post.title}</h2>
-                        <p>Posted on <time datetime="${post.date}">${new Date(post.date).toDateString()}</time></p>
-                        <p>${post.body}</p>
-                    `;
-                    postsSection.appendChild(postElement);
-                });
-            });
-    </script>
 </body>
 </html>
