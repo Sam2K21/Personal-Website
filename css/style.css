@@ -95,3 +95,52 @@ nav ul li {
     color: var(--text-color);
   }
 }
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.project h2 {
+    font-size: 1.5em;
+}
+
+.project p {
+    font-size: 1em;
+}
+
+.project a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog-post {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.blog-post h2 {
+    font-size: 1.5em;
+}
+
+.blog-post p {
+    font-size: 1em;
+}
+
+.blog-post a {
+    color: #007bff;
+    text-decoration: none;
+}
